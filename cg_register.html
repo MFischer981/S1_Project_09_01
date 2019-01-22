@@ -54,8 +54,10 @@
     <section>
         <h1>Conference Registration Form</h1>
         <p>Required Item (*)</p>
+        <!-- Form with action and method of POST. -->
         <form action="http://www.example.com/cg/register" method="POST">
 
+            <!-- Title with label and input. Datalist with possible options for titles. -->
             <label for="titleBox">Title</label>
             <input type="text" name="title" id="titleBox" list="titleList">
             <datalist id="titleList">
@@ -67,28 +69,36 @@
                 <option value="Assist. Prof" />
             </datalist>
 
+            <!-- First name label and input. Set input to required. Assigned matching ids and for attributes. -->
             <label for="fnBox">First Name*</label>
             <input type="text" name="firstName" id="fnBox" required>
 
+            <!-- Last name label and input. Set input to required. Assigned matching ids and for attributes. -->
             <label for="lnBox">Last Name*</label>
             <input type="text" name="lastName" id="lnBox" required>
 
+            <!-- Address label and input. Set input to required. Assigned matching ids and for attributes. -->
             <label for="addBox">Address*</label>
             <input type="text" name="address" id="addBox" required>
 
+            <!-- Company or university label and input. Set input to required. Assigned matching ids and for attributes. -->
             <label for="groupBox">Company or University</label>
             <input type="text" name="group" id="groupBox">
 
+            <!-- Email label and input. Set input to required. Assigned matching ids and for attributes. -->
             <label for="mailBox">E-mail*</label>
             <input type="email" name="email" id="mailBox" required>
 
+            <!-- Phone number label and input. Set input to required. Assigned matching ids and for attributes. -->
             <label for="phoneBox">Phone Number*</label>
             <input type="tel" name="phoneNumber" id="phoneBox" required placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$ t">
 
+            <!-- ID label and input. Assigned matching ids and for attributes. -->
             <label for="idBox">ACGIP Membership Number</label>
             <input type="tel" name="acgipID" id="idBox" placeholder="acgip-nnnnnn" pattern="^acgip\-\d{6}$">
 
-            <label for="regList"></label>
+            <!-- Registration type label and seletion list. Selection list with possible options for registration. -->
+            <label for="regList">Registation Type</label>
             <select name="registerType" id="regList">
                 <option value="member">ACGIP Member ($695)</option>
                 <option value="nonmember">Non-Member ($795)</option>
@@ -97,6 +107,7 @@
                 <option value="guest">Guest ($35)</option>
             </select>
 
+            <!-- Submit input button. -->
             <p>
                 <input type="submit" value="Continue" />
             </p>
